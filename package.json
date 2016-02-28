@@ -1,0 +1,45 @@
+{
+  "name": "Knockout SPA",
+  "version": "1.0.0",
+  "description": "A Knockout SPA using Backbone.js",
+  "main": "public/index.html",
+  "scripts": {
+    "watch-styles": "gulp watch-styles",
+    "watch-scripts": "gulp watch-scripts",
+    "build-styles": "gulp build-styles",
+    "build-scripts": "gulp build-scripts",
+    "watch": "gulp watch",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abradley2/knockout-spa"
+  },
+  "author": "Tony Bradley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abradley2/knockout-spa/issues"
+  },
+  "homepage": "https://github.com/abradley2/knockout-spa",
+  "dependencies": {
+    "backbone": "^1.2.3",
+    "backbone-view-mediator": "^1.0.1",
+    "jquery": "^2.1.4",
+    "knockout": "^3.4.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "coffeeify": "^2.0.1",
+    "event-stream": "^3.3.2",
+    "glob": "^5.0.0",
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "plain-jadeify": "0.0.2",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.6.0"
+  }
+}
