@@ -1,5 +1,5 @@
 {
-  "name": "Knockout SPA",
+  "name": "knockout-spa",
   "version": "1.0.0",
   "description": "A Knockout SPA using Backbone.js",
   "main": "public/index.html",
