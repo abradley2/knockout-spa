@@ -9,4 +9,7 @@ require './bindings/index.coffee'
 
 $(document).ready ->
     router = require './router.coffee'
+    viewMediator = require './viewMediator.coffee'
+
+    viewMediator.el = document.querySelector 'body'
     Backbone.history.start { pushState: true }
