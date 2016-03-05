@@ -1,7 +1,7 @@
 _.extend ko.observable.fn, Backbone.Events
 
 ko.observable.fn.track = (model, field) ->
-    trackId = _.uniquedId()
+    trackId = _.uniqueId()
 
     if this() then model.set( field, this() ) else this( model.get field )
 
