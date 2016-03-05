@@ -1,16 +1,18 @@
 _.extend ko.observable.fn, Backbone.Events
 
 ko.observable.fn.track = (model, field) ->
+    trackId = _.uniquedId()
+
     if this() then model.set( field, this() ) else this( model.get field )
 
     handleModelUpdate = (model, value, options) ->
-        if options.updateObservable then this(value) else false
+        if options.trackId == trackId then this(value) else false
 
     @listenTo model,
         "change:#{field}",
-        _.partial handleModelUpdate, _, _, updateObservable: true
+        _.partial handleModelUpdate, _, _, trackId: trackId
 
-    sub = @subscribe (val) => model.set field, val, updateObservable: false
+    sub = @subscribe (val) => model.set field, val, trackId: false
 
     @on 'untrack', sub.dispose
 
