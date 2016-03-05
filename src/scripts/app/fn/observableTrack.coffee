@@ -14,7 +14,7 @@ ko.observable.fn.track = (model, field) ->
 
     sub = @subscribe (val) => model.set field, val, trackId: false
 
-    @on 'untrack', sub.dispose
+    @on 'untrack', sub.dispose, sub
 
     return this
 
